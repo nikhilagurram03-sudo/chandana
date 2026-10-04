@@ -1,2 +1,137 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Chandana 💖</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            overflow: hidden;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: pop 1s ease;
+        }
+
+        h1 {
+            color: #ff4f81;
+            font-size: 40px;
+        }
+
+        p {
+            color: #555;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        button {
+            background: #ff4f81;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ff2f68;
+        }
+
+        #message {
+            display: none;
+            margin-top: 20px;
+            color: #ff4f81;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 25px;
+            animation: fall 5s linear infinite;
+        }
+
+        @keyframes pop {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fall {
+            0% {
+                top: -10%;
+                opacity: 1;
+            }
+            100% {
+                top: 110%;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Hey Chandana! 💕</h1>
+
+        <p>
+            🌸 You are such a wonderful friend! 🌸
+            <br><br>
+            I’m really lucky to have a friend like you. 🥰
+            <br>
+            Keep smiling, keep shining and always stay amazing! ✨
+        </p>
+
+        <button onclick="showMessage()">
+            Click Me 💖
+        </button>
+
+        <div id="message">
+            🌷 Best wishes to you, Chandana! 🌷<br>
+            💕 Stay Happy & Keep Smiling! 💕
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+        }
+
+        // Falling hearts
+        for (let i = 0; i < 20; i++) {
+            let heart = document.createElement("div");
+
+            heart.className = "heart";
+            heart.innerHTML = "💖";
+
+            heart.style.left = Math.random() * 100 + "%";
+            heart.style.animationDelay = Math.random() * 5 + "s";
+            heart.style.animationDuration =
+                (3 + Math.random() * 4) + "s";
+
+            document.body.appendChild(heart);
+        }
+    </script>
+
+</body>
+</html>
